@@ -1,3 +1,3 @@
 export const Header = () => {
-  return <div className='container text-center py-8 text-3xl font-medium'>Lookup a postcode</div>;
+  return <div className='container text-center pt-8 text-2xl font-medium'>Lookup a postcode</div>;
 };
