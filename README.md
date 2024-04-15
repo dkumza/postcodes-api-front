@@ -9,4 +9,6 @@ yarn
 Dependencies I have used:
 
 - [tailwindcss](https://tailwindcss.com/docs/guides/vite):
--
+- [formik](https://www.npmjs.com/package/formik)
+- [yup](https://www.npmjs.com/package/yup)
+- [axios](https://www.npmjs.com/package/axios)
