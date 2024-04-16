@@ -1,5 +1,7 @@
 Simple React app to fetch API endpoint - `api.postcodes.io/postcodes/:postcode` with user provided postcode.
 
+Live site can be found [here](https://dkumza.github.io/postcodes-api-front/)
+
 App created with Vite (if you use `npm`, then replace `yarn` accordingly):
 
 ```bash
@@ -37,8 +39,6 @@ yarn # to install modules
 code . # or any your favorite editor (vim?)
 yarn dev # to start dev server
 ```
-
-Or jump straight to [live site](https://dkumza.github.io/postcodes-api-front/)
 
 To build finished project run:
 

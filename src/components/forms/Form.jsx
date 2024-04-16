@@ -3,7 +3,7 @@ import { FormButton } from './FormButton';
 import { FormInput } from './FormInput';
 import { useFormik } from 'formik';
 import { postcodeValidationSchema } from './validationSchemas';
-import { ToastThemed } from '../ToastThemed';
+import { ToastThemed } from '../UI/ToastThemed';
 import { useDispatch } from 'react-redux';
 import { getPostcode } from '../../store/actions/postcode-actions';
 
