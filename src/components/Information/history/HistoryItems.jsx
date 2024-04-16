@@ -1,10 +1,6 @@
 import { useDispatch, useSelector } from 'react-redux';
 import PropTypes from 'prop-types';
-import {
-  deletePostcode,
-  getPostcode,
-  toDeletePostcode,
-} from '../../../store/actions/postcode-actions';
+import { getPostcode, toDeletePostcode } from '../../../store/actions/postcode-actions';
 import delIcon from '../../../assets/del-icon.svg';
 import { setModal } from '../../../store/slices/postcode-slices';
 import { DeleteModal } from './DeleteModal/DeleteModal';
