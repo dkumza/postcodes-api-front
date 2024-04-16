@@ -4,8 +4,6 @@ import { ResultsSingleItem } from './ResultsSingleItem';
 export const Results = () => {
   const postCodeInfo = useSelector((state) => state.postcodes.postcodeInfo);
 
-  console.log('postCodeInfo: ', postCodeInfo);
-
   return (
     <div className='container shadow bg-indigo-50 rounded-md rounded-t-none border border-indigo-200 border-t-0 min-w-[22rem] p-2 px-4'>
       <div className='min-h-[108px]'>

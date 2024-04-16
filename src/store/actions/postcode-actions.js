@@ -1,5 +1,11 @@
 import axios from 'axios';
-import { addPostcode, postCodeInfo, setShowInfo, setSpinner } from '../slices/postcode-slices';
+import {
+  addPostcode,
+  postCodeInfo,
+  removePostcode,
+  setShowInfo,
+  setSpinner,
+} from '../slices/postcode-slices';
 import { toast } from 'react-toastify';
 
 const POSTCODE_URL = 'https://api.postcodes.io/postcodes/';
@@ -31,4 +37,9 @@ export const getPostcode = (postcode, formik) => async (dispatch) => {
       toast.error(errorMsg);
     }, 1000);
   }
+};
+
+export const deletePostcode = (postcode) => (dispatch) => {
+  dispatch(removePostcode(postcode));
+  toast.info('Postcode deleted');
 };

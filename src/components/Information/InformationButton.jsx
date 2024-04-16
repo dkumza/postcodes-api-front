@@ -1,6 +1,8 @@
 import { useDispatch, useSelector } from 'react-redux';
 import { setShowInfo } from '../../store/slices/postcode-slices';
 
+import PropTypes from 'prop-types';
+
 export const InformationButton = ({ text }) => {
   const dispatch = useDispatch();
   const showInfo = useSelector((state) => state.postcodes.showInfo);
@@ -9,8 +11,6 @@ export const InformationButton = ({ text }) => {
     const target = e.target.textContent;
     target === 'History' ? dispatch(setShowInfo(false)) : dispatch(setShowInfo(true));
   };
-
-  console.log('text: ', text);
 
   const buttonStyle =
     showInfo && text === 'Result'
@@ -27,4 +27,8 @@ export const InformationButton = ({ text }) => {
       {text}
     </button>
   );
+};
+
+InformationButton.propTypes = {
+  text: PropTypes.string.isRequired,
 };
