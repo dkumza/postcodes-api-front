@@ -1,4 +1,5 @@
 import { useSelector } from 'react-redux';
+import { ResultsSingleItem } from './ResultsSingleItem';
 
 export const Results = () => {
   const postCodeInfo = useSelector((state) => state.postcodes.postcodeInfo);
@@ -11,14 +12,10 @@ export const Results = () => {
 
   return (
     <div className='container border'>
-      {postCodeInfo && (
-        <div>
-          <div>Country: {postCodeInfo.country}</div>
-          <div>Longtitude: {postCodeInfo.longitude}</div>
-          <div>Latitude: {postCodeInfo.latitude}</div>
-          <div>Admin District: {postCodeInfo.codes.admin_district}</div>
-        </div>
-      )}
+      <ResultsSingleItem text={'Country: '} info={postCodeInfo.country} />
+      <ResultsSingleItem text={'Longitude: '} info={postCodeInfo.longitude} />
+      <ResultsSingleItem text={'Latitude: '} info={postCodeInfo.latitude} />
+      <ResultsSingleItem text={'Admin District: '} info={postCodeInfo.codes.admin_district} />
     </div>
   );
 };

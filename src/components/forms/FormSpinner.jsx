@@ -4,7 +4,7 @@ export const FormSpinner = () => {
   return (
     <div className='flex gap-2 items-center'>
       <ClipLoader color='#fff' size={24} />
-      <p>Loading...</p>
+      <p>Searching...</p>
     </div>
   );
 };

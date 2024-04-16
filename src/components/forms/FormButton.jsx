@@ -1,6 +1,9 @@
+import { useSelector } from 'react-redux';
 import { FormSpinner } from './FormSpinner';
 
-export const FormButton = ({ spinner }) => {
+export const FormButton = () => {
+  const spinner = useSelector((state) => state.postcodes.spinner);
+
   return (
     <div className='flex flex-col'>
       <button
@@ -10,7 +13,7 @@ export const FormButton = ({ spinner }) => {
         type='submit'
         disabled={spinner}
       >
-        {spinner ? <FormSpinner /> : 'Submit'}
+        {spinner ? <FormSpinner /> : 'Search'}
       </button>
     </div>
   );

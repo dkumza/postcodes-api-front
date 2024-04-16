@@ -1,6 +1,10 @@
 export const localStorageMiddleware = (store) => (next) => (action) => {
   let result = next(action);
-  // set the postcodes in local storage by stringifying the postcodes array
-  localStorage.setItem('postcodes', JSON.stringify(store.getState().postcodes));
+  //  getting only the postcodes array from the store
+  const postcodesState = store.getState().postcodes.postcodes;
+  // converting the postcodes state to JSON string
+  const postcodesJson = JSON.stringify(postcodesState);
+  // setting the postcodes in local storage
+  localStorage.setItem('postcodes', postcodesJson);
   return result;
 };

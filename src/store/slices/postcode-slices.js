@@ -2,9 +2,13 @@ import { createSlice } from '@reduxjs/toolkit';
 
 const storedPostcodes = JSON.parse(localStorage.getItem('postcodes'));
 
+// check type of storedPostcodes
+// console.log(Array.isArray(storedPostcodes));
+
 const initialState = {
-  postcodes: storedPostcodes ? storedPostcodes.postcodes : [],
+  postcodes: storedPostcodes || [],
   postcodeInfo: null,
+  spinner: false,
 };
 
 const postcodeSlice = createSlice({
@@ -20,9 +24,12 @@ const postcodeSlice = createSlice({
     postCodeInfo(state, action) {
       state.postcodeInfo = action.payload;
     },
+    setSpinner(state, action) {
+      state.spinner = action.payload;
+    },
   },
 });
 
-export const { addPostcode, removePostcode, postCodeInfo } = postcodeSlice.actions;
+export const { addPostcode, removePostcode, postCodeInfo, setSpinner } = postcodeSlice.actions;
 
 export default postcodeSlice.reducer;
