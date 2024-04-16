@@ -38,6 +38,8 @@ code . # or any your favorite editor (vim?)
 yarn dev # to start dev server
 ```
 
+Or jump straight to [live site](https://dkumza.github.io/postcodes-api-front/)
+
 To build finished project run:
 
 ```bash
