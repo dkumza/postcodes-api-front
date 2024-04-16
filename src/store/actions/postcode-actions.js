@@ -1,5 +1,5 @@
 import axios from 'axios';
-import { addPostcode, postCodeInfo, setSpinner } from '../slices/postcode-slices';
+import { addPostcode, postCodeInfo, setShowInfo, setSpinner } from '../slices/postcode-slices';
 import { toast } from 'react-toastify';
 
 const POSTCODE_URL = 'https://api.postcodes.io/postcodes/';
@@ -14,7 +14,8 @@ export const getPostcode = (postcode, formik) => async (dispatch) => {
     setTimeout(() => {
       dispatch(addPostcode(postcode));
       dispatch(postCodeInfo(result));
-      formik.resetForm();
+      dispatch(setShowInfo(true));
+      if (formik) formik.resetForm();
       toast.info('Postcode found');
       dispatch(setSpinner(false));
     }, 1000);

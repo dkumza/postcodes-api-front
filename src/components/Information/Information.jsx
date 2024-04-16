@@ -1,11 +1,10 @@
-import { useDispatch, useSelector } from 'react-redux';
+import { useSelector } from 'react-redux';
 import { InformationButton } from './InformationButton';
 import { History } from './history/History';
 import { Results } from './results/Results';
 
 export const Information = () => {
   const showInfo = useSelector((state) => state.postcodes.showInfo);
-  console.log('showInfo: ', showInfo);
 
   return (
     <div className='flex flex-col justify-center items-center'>

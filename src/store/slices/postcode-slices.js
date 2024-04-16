@@ -17,7 +17,8 @@ const postcodeSlice = createSlice({
   initialState,
   reducers: {
     addPostcode(state, action) {
-      state.postcodes.push(action.payload);
+      state.postcodes = state.postcodes.filter((postcode) => postcode !== action.payload);
+      state.postcodes.unshift(action.payload);
     },
     removePostcode(state, action) {
       state.postcodes = state.postcodes.filter((postcode) => postcode !== action.payload);
