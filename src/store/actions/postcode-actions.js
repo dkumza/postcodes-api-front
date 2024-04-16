@@ -5,6 +5,7 @@ import {
   removePostcode,
   setShowInfo,
   setSpinner,
+  setToDelete,
 } from '../slices/postcode-slices';
 import { toast } from 'react-toastify';
 
@@ -33,10 +34,13 @@ export const getPostcode = (postcode, formik) => async (dispatch) => {
       const errorMsg = error.response.data.error;
       dispatch(postCodeInfo(null));
       formik.setFieldError('postcode', errorMsg);
-      console.log('formik: ', formik.errors.postcode);
       toast.error(errorMsg);
     }, 1000);
   }
+};
+
+export const toDeletePostcode = (postcode) => (dispatch) => {
+  dispatch(setToDelete(postcode));
 };
 
 export const deletePostcode = (postcode) => (dispatch) => {
