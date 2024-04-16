@@ -1,14 +1,14 @@
 import './App.css';
 import { Header } from './components/Header';
+import { Information } from './components/Information/Information';
 import { Form } from './components/forms/Form';
-import { Results } from './components/results/Results';
 
 function App() {
   return (
     <>
       <Header />
       <Form />
-      <Results />
+      <Information />
     </>
   );
 }

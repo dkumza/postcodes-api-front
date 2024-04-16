@@ -24,7 +24,9 @@ export const getPostcode = (postcode, formik) => async (dispatch) => {
       dispatch(setSpinner(false));
       console.error('Failed to fetch postcode: ', error);
       const errorMsg = error.response.data.error;
-      formik.errors.postcode = errorMsg;
+      dispatch(postCodeInfo(null));
+      formik.setFieldError('postcode', errorMsg);
+      console.log('formik: ', formik.errors.postcode);
       toast.error(errorMsg);
     }, 1000);
   }

@@ -8,6 +8,7 @@ const storedPostcodes = JSON.parse(localStorage.getItem('postcodes'));
 const initialState = {
   postcodes: storedPostcodes || [],
   postcodeInfo: null,
+  showInfo: true,
   spinner: false,
 };
 
@@ -24,12 +25,16 @@ const postcodeSlice = createSlice({
     postCodeInfo(state, action) {
       state.postcodeInfo = action.payload;
     },
+    setShowInfo(state, action) {
+      state.showInfo = action.payload;
+    },
     setSpinner(state, action) {
       state.spinner = action.payload;
     },
   },
 });
 
-export const { addPostcode, removePostcode, postCodeInfo, setSpinner } = postcodeSlice.actions;
+export const { addPostcode, removePostcode, postCodeInfo, setShowInfo, setSpinner } =
+  postcodeSlice.actions;
 
 export default postcodeSlice.reducer;

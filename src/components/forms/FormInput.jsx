@@ -1,10 +1,12 @@
+import PropTypes from 'prop-types';
+
 export const FormInput = ({ formik }) => {
   return (
     <div className='flex flex-col'>
       <input
         className={`${
           formik.errors.postcode ? `border-red-600` : `border-indigo-300`
-        } border rounded-lg py-1.5 px-3 focus:border-indigo-500 focus:outline-none`}
+        } border rounded-md py-1.5 px-3 focus:border-indigo-500 focus:outline-none`}
         placeholder='Enter Postcode'
         type='text'
         name='postcode'
@@ -17,4 +19,8 @@ export const FormInput = ({ formik }) => {
       ) : null}
     </div>
   );
+};
+
+FormInput.propTypes = {
+  formik: PropTypes.object.isRequired,
 };
