@@ -12,7 +12,7 @@ App created with Vite (if you use `npm`, then replace `yarn` accordingly):
 yarn create vite new-app-name --template react
 cd new-app-name
 yarn # to install modules
-code . # to open with your favorite editor, replace 'code'
+code . # or any your favorite editor
 yarn dev # to start dev server
 ```
 
@@ -40,7 +40,7 @@ git clone https://github.com/dkumza/postcodes-api-front
 cd postcodes-api-front
 # for npm users replace yarn accordingly with npm
 yarn # to install modules
-code . # or any your favorite editor (vim?)
+code . # or any your favorite editor
 yarn dev # to start dev server
 ```
 

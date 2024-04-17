@@ -2,9 +2,6 @@ import { createSlice } from '@reduxjs/toolkit';
 
 const storedPostcodes = JSON.parse(localStorage.getItem('postcodes'));
 
-// check type of storedPostcodes
-// console.log(Array.isArray(storedPostcodes));
-
 const initialState = {
   postcodes: storedPostcodes || [],
   postcodeInfo: null,

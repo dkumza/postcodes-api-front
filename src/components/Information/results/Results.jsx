@@ -27,5 +27,3 @@ export const Results = () => {
     </div>
   );
 };
-
-// min-w-[22rem]
