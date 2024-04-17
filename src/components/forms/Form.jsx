@@ -23,7 +23,7 @@ export const Form = () => {
   return (
     <div className='container flex flex-col justify-center py-12 w-fit gap-2'>
       <ToastThemed />
-      <form className='flex flex-col gap-2 md:min-w-80' onSubmit={formik.handleSubmit}>
+      <form className='flex flex-col gap-2 md:min-w-80 w-72' onSubmit={formik.handleSubmit}>
         <FormInput formik={formik} />
         <FormButton />
       </form>
