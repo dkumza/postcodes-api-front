@@ -1,5 +1,9 @@
 Simple React app to fetch API endpoint - `api.postcodes.io/postcodes/:postcode` with user provided postcode.
 
+TLDR schema:
+<br>
+<img loading="lazy" width="480px" src="./media/logic-drawing.png" alt="schema png" />
+
 Live site can be found [here](https://dkumza.github.io/postcodes-api-front/)
 
 App created with Vite (if you use `npm`, then replace `yarn` accordingly):

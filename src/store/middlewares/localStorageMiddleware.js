@@ -1,10 +1,8 @@
 export const localStorageMiddleware = (store) => (next) => (action) => {
   let result = next(action);
-  //  getting only the postcodes array from the store
+  //  getting only the postcodes array from the store, and saving as JSON to local storage
   const postcodesState = store.getState().postcodes.postcodes;
-  // converting the postcodes state to JSON string
   const postcodesJson = JSON.stringify(postcodesState);
-  // setting the postcodes in local storage
   localStorage.setItem('postcodes', postcodesJson);
   return result;
 };
