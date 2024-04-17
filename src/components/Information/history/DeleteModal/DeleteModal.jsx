@@ -17,14 +17,19 @@ export const DeleteModal = () => {
       onClick={cancelDelete}
     >
       <div
-        className='relative m-4 md:min-w-[22rem] rounded-lg bg-white shadow-2xl p-6 flex flex-col items-center'
+        className='relative m-4 md:min-w-[22rem] rounded-lg bg-white shadow-2xl p-4 flex flex-col items-center'
         onClick={(e) => e.stopPropagation()}
       >
         <div>
-          <img className='h-4 absolute right-4 top-4' src={delIcon} alt='' onClick={cancelDelete} />
-          <img className='h-14' src={dangerIcon} alt='' />
+          <img
+            className='h-4 absolute right-4 top-4'
+            src={delIcon}
+            alt='delete icon'
+            onClick={cancelDelete}
+          />
+          <img className='h-14' src={dangerIcon} alt='danger icon' />
         </div>
-        <div className='flex items-center  md:text-lg py-4'>
+        <div className='flex items-center  md:text-lg pt-2 pb-4'>
           Delete {toDelete} postcode from history tab?
         </div>
         <div className='flex flex-wrap items-center justify-end text-blue-gray-500 gap-4'>
