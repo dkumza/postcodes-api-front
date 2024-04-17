@@ -18,7 +18,7 @@ export const ModalButton = ({ css, text }) => {
   return (
     <div>
       <button
-        className={`${css} px-6 h-9 mr-2  text-md border  capitalize  rounded-md`}
+        className={`${css} px-6 h-9  text-md border  capitalize  rounded-md`}
         onClick={text === 'Delete' ? handleDelete : cancelDelete}
       >
         {text}
