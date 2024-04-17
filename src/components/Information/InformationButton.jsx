@@ -21,7 +21,7 @@ export const InformationButton = ({ text }) => {
 
   return (
     <button
-      className={`${buttonStyle}  border border-indigo-200 border-b-0 min-w-[175px] py-1  rounded-md rounded-b-none`}
+      className={`${buttonStyle}  border border-indigo-200 border-b-0 md:min-w-[175px] w-full py-1  rounded rounded-b-none`}
       onClick={(e) => handleChangeView(e)}
     >
       {text}

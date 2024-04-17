@@ -6,7 +6,7 @@ export const FormInput = ({ formik }) => {
   return (
     <div className='flex flex-col'>
       <input
-        className={`${formikBorder} border rounded-md py-1.5 px-3 focus:border-indigo-500 focus:outline-none`}
+        className={`${formikBorder} border rounded py-1.5 px-3 focus:border-indigo-500 focus:outline-none`}
         placeholder='Enter Postcode'
         type='text'
         name='postcode'

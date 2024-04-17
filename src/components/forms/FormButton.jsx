@@ -9,7 +9,7 @@ export const FormButton = () => {
       <button
         className={`${
           spinner ? `hover:cursor-not-allowed` : null
-        } rounded-md shadow-md border-indigo-400 h-9 px-3 w-full capitalize bg-indigo-400 text-white hover:bg-indigo-500 flex justify-center items-center`}
+        } rounded shadow-md border-indigo-400 h-9 px-3 w-full capitalize bg-indigo-400 text-white hover:bg-indigo-500 flex justify-center items-center`}
         type='submit'
         disabled={spinner}
       >

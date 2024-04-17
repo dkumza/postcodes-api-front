@@ -5,11 +5,11 @@ import { Form } from './components/forms/Form';
 
 function App() {
   return (
-    <>
+    <div className='flex flex-col items-center'>
       <Header />
       <Form />
       <Information />
-    </>
+    </div>
   );
 }
 

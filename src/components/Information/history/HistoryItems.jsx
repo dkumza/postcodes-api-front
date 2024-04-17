@@ -22,7 +22,7 @@ export const HistoryItems = ({ postcode }) => {
   return (
     <div className=''>
       {modal && <DeleteModal />}
-      <div className='hover:cursor-pointer hover:bg-indigo-100 px-2 flex justify-between items-center py-1'>
+      <div className='hover:cursor-pointer hover:bg-indigo-100 px-2 flex justify-between items-center py-1 min-w-full'>
         <p onClick={() => handleSearch(postcode)}>{postcode}</p>
         <div onClick={() => handleToDelete(postcode)}>
           <img className='h-6 hover:bg-gray-100 rounded-full p-1' src={delIcon} alt='' />

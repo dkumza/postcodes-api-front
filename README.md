@@ -57,3 +57,6 @@ To test builded app locally:
 # while in project dir run:
 yarn preview # or npm run preview
 ```
+
+I use Github Actions to create GitHub pages. This allows to check out / test builded static site online.
+For more info read [here](https://vitejs.dev/guide/static-deploy.html#github-pages)
